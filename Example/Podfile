@@ -1,0 +1,2 @@
+pod "FBAnnotationClustering", :path => "../FBAnnotationClustering.podspec"
+

@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A86F1B196A24278AA00E45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F00D94D0560465788605775 /* libPods.a */; };
+		DC505A8518F0B505008229F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8418F0B505008229F7 /* Foundation.framework */; };
+		DC505A8718F0B505008229F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8618F0B505008229F7 /* CoreGraphics.framework */; };
+		DC505A8918F0B505008229F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8818F0B505008229F7 /* UIKit.framework */; };
+		DC505A8F18F0B505008229F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC505A8D18F0B505008229F7 /* InfoPlist.strings */; };
+		DC505A9118F0B505008229F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC505A9018F0B505008229F7 /* main.m */; };
+		DC505A9818F0B505008229F7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC505A9618F0B505008229F7 /* Main_iPhone.storyboard */; };
+		DC505A9B18F0B505008229F7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC505A9918F0B505008229F7 /* Main_iPad.storyboard */; };
+		DC505AA018F0B505008229F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC505A9F18F0B505008229F7 /* Images.xcassets */; };
+		DC505AA718F0B505008229F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505AA618F0B505008229F7 /* XCTest.framework */; };
+		DC505AA818F0B505008229F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8418F0B505008229F7 /* Foundation.framework */; };
+		DC505AA918F0B505008229F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8818F0B505008229F7 /* UIKit.framework */; };
+		DC505AB118F0B505008229F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC505AAF18F0B505008229F7 /* InfoPlist.strings */; };
+		DC505AB318F0B505008229F7 /* AnnotationClusteringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC505AB218F0B505008229F7 /* AnnotationClusteringTests.m */; };
+		DC505AC318F0B9C7008229F7 /* FBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC505ABF18F0B9C7008229F7 /* FBAppDelegate.m */; };
+		DC505AC418F0B9C7008229F7 /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC505AC218F0B9C7008229F7 /* FBViewController.m */; };
+		DC505AC818F0BA9E008229F7 /* FBAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC505AC718F0BA9E008229F7 /* FBAnnotation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC505AAA18F0B505008229F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC505A7918F0B505008229F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC505A8018F0B505008229F7;
+			remoteInfo = AnnotationClustering;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F00D94D0560465788605775 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		633C310315034479BCA684C7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DC505A8118F0B505008229F7 /* AnnotationClustering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnotationClustering.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC505A8418F0B505008229F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC505A8618F0B505008229F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC505A8818F0B505008229F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC505A8C18F0B505008229F7 /* AnnotationClustering-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnnotationClustering-Info.plist"; sourceTree = "<group>"; };
+		DC505A8E18F0B505008229F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC505A9018F0B505008229F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC505A9218F0B505008229F7 /* AnnotationClustering-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnnotationClustering-Prefix.pch"; sourceTree = "<group>"; };
+		DC505A9718F0B505008229F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DC505A9A18F0B505008229F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DC505A9F18F0B505008229F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC505AA518F0B505008229F7 /* AnnotationClusteringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnotationClusteringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC505AA618F0B505008229F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DC505AAE18F0B505008229F7 /* AnnotationClusteringTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnnotationClusteringTests-Info.plist"; sourceTree = "<group>"; };
+		DC505AB018F0B505008229F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC505AB218F0B505008229F7 /* AnnotationClusteringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnotationClusteringTests.m; sourceTree = "<group>"; };
+		DC505ABE18F0B9C7008229F7 /* FBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAppDelegate.h; sourceTree = "<group>"; };
+		DC505ABF18F0B9C7008229F7 /* FBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAppDelegate.m; sourceTree = "<group>"; };
+		DC505AC118F0B9C7008229F7 /* FBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBViewController.h; sourceTree = "<group>"; };
+		DC505AC218F0B9C7008229F7 /* FBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
+		DC505AC618F0BA9E008229F7 /* FBAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAnnotation.h; sourceTree = "<group>"; };
+		DC505AC718F0BA9E008229F7 /* FBAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAnnotation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC505A7E18F0B505008229F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505A8718F0B505008229F7 /* CoreGraphics.framework in Frameworks */,
+				DC505A8918F0B505008229F7 /* UIKit.framework in Frameworks */,
+				DC505A8518F0B505008229F7 /* Foundation.framework in Frameworks */,
+				8A86F1B196A24278AA00E45F /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC505AA218F0B505008229F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505AA718F0B505008229F7 /* XCTest.framework in Frameworks */,
+				DC505AA918F0B505008229F7 /* UIKit.framework in Frameworks */,
+				DC505AA818F0B505008229F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC505A7818F0B505008229F7 = {
+			isa = PBXGroup;
+			children = (
+				DC505A9618F0B505008229F7 /* Main_iPhone.storyboard */,
+				DC505A9918F0B505008229F7 /* Main_iPad.storyboard */,
+				DC505ABC18F0B9C7008229F7 /* Classes */,
+				DC505A8A18F0B505008229F7 /* AnnotationClustering */,
+				DC505AAC18F0B505008229F7 /* AnnotationClusteringTests */,
+				DC505A8318F0B505008229F7 /* Frameworks */,
+				DC505A8218F0B505008229F7 /* Products */,
+				633C310315034479BCA684C7 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DC505A8218F0B505008229F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC505A8118F0B505008229F7 /* AnnotationClustering.app */,
+				DC505AA518F0B505008229F7 /* AnnotationClusteringTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC505A8318F0B505008229F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC505A8418F0B505008229F7 /* Foundation.framework */,
+				DC505A8618F0B505008229F7 /* CoreGraphics.framework */,
+				DC505A8818F0B505008229F7 /* UIKit.framework */,
+				DC505AA618F0B505008229F7 /* XCTest.framework */,
+				3F00D94D0560465788605775 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC505A8A18F0B505008229F7 /* AnnotationClustering */ = {
+			isa = PBXGroup;
+			children = (
+				DC505A9F18F0B505008229F7 /* Images.xcassets */,
+				DC505A8B18F0B505008229F7 /* Supporting Files */,
+			);
+			path = AnnotationClustering;
+			sourceTree = "<group>";
+		};
+		DC505A8B18F0B505008229F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC505A8C18F0B505008229F7 /* AnnotationClustering-Info.plist */,
+				DC505A8D18F0B505008229F7 /* InfoPlist.strings */,
+				DC505A9018F0B505008229F7 /* main.m */,
+				DC505A9218F0B505008229F7 /* AnnotationClustering-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC505AAC18F0B505008229F7 /* AnnotationClusteringTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC505AB218F0B505008229F7 /* AnnotationClusteringTests.m */,
+				DC505AAD18F0B505008229F7 /* Supporting Files */,
+			);
+			path = AnnotationClusteringTests;
+			sourceTree = "<group>";
+		};
+		DC505AAD18F0B505008229F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC505AAE18F0B505008229F7 /* AnnotationClusteringTests-Info.plist */,
+				DC505AAF18F0B505008229F7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC505ABC18F0B9C7008229F7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC505AC518F0BA9E008229F7 /* Models */,
+				DC505ABD18F0B9C7008229F7 /* Application */,
+				DC505AC018F0B9C7008229F7 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DC505ABD18F0B9C7008229F7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DC505ABE18F0B9C7008229F7 /* FBAppDelegate.h */,
+				DC505ABF18F0B9C7008229F7 /* FBAppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DC505AC018F0B9C7008229F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC505AC118F0B9C7008229F7 /* FBViewController.h */,
+				DC505AC218F0B9C7008229F7 /* FBViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DC505AC518F0BA9E008229F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC505AC618F0BA9E008229F7 /* FBAnnotation.h */,
+				DC505AC718F0BA9E008229F7 /* FBAnnotation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC505A8018F0B505008229F7 /* AnnotationClustering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC505AB618F0B505008229F7 /* Build configuration list for PBXNativeTarget "AnnotationClustering" */;
+			buildPhases = (
+				C824D8F46E5A49FC8DD53F70 /* Check Pods Manifest.lock */,
+				DC505A7D18F0B505008229F7 /* Sources */,
+				DC505A7E18F0B505008229F7 /* Frameworks */,
+				DC505A7F18F0B505008229F7 /* Resources */,
+				D2664DE289974DEE8DDE59FB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnnotationClustering;
+			productName = AnnotationClustering;
+			productReference = DC505A8118F0B505008229F7 /* AnnotationClustering.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC505AA418F0B505008229F7 /* AnnotationClusteringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC505AB918F0B505008229F7 /* Build configuration list for PBXNativeTarget "AnnotationClusteringTests" */;
+			buildPhases = (
+				DC505AA118F0B505008229F7 /* Sources */,
+				DC505AA218F0B505008229F7 /* Frameworks */,
+				DC505AA318F0B505008229F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC505AAB18F0B505008229F7 /* PBXTargetDependency */,
+			);
+			name = AnnotationClusteringTests;
+			productName = AnnotationClusteringTests;
+			productReference = DC505AA518F0B505008229F7 /* AnnotationClusteringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC505A7918F0B505008229F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Infinum Ltd.";
+				TargetAttributes = {
+					DC505AA418F0B505008229F7 = {
+						TestTargetID = DC505A8018F0B505008229F7;
+					};
+				};
+			};
+			buildConfigurationList = DC505A7C18F0B505008229F7 /* Build configuration list for PBXProject "AnnotationClustering" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC505A7818F0B505008229F7;
+			productRefGroup = DC505A8218F0B505008229F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC505A8018F0B505008229F7 /* AnnotationClustering */,
+				DC505AA418F0B505008229F7 /* AnnotationClusteringTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC505A7F18F0B505008229F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505A9B18F0B505008229F7 /* Main_iPad.storyboard in Resources */,
+				DC505AA018F0B505008229F7 /* Images.xcassets in Resources */,
+				DC505A9818F0B505008229F7 /* Main_iPhone.storyboard in Resources */,
+				DC505A8F18F0B505008229F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC505AA318F0B505008229F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505AB118F0B505008229F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C824D8F46E5A49FC8DD53F70 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2664DE289974DEE8DDE59FB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC505A7D18F0B505008229F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505AC818F0BA9E008229F7 /* FBAnnotation.m in Sources */,
+				DC505AC318F0B9C7008229F7 /* FBAppDelegate.m in Sources */,
+				DC505A9118F0B505008229F7 /* main.m in Sources */,
+				DC505AC418F0B9C7008229F7 /* FBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC505AA118F0B505008229F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC505AB318F0B505008229F7 /* AnnotationClusteringTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC505AAB18F0B505008229F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC505A8018F0B505008229F7 /* AnnotationClustering */;
+			targetProxy = DC505AAA18F0B505008229F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC505A8D18F0B505008229F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC505A8E18F0B505008229F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC505A9618F0B505008229F7 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC505A9718F0B505008229F7 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			path = AnnotationClustering;
+			sourceTree = "<group>";
+		};
+		DC505A9918F0B505008229F7 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC505A9A18F0B505008229F7 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			path = AnnotationClustering;
+			sourceTree = "<group>";
+		};
+		DC505AAF18F0B505008229F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC505AB018F0B505008229F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC505AB418F0B505008229F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC505AB518F0B505008229F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC505AB718F0B505008229F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 633C310315034479BCA684C7 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnnotationClustering/AnnotationClustering-Prefix.pch";
+				INFOPLIST_FILE = "AnnotationClustering/AnnotationClustering-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC505AB818F0B505008229F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 633C310315034479BCA684C7 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnnotationClustering/AnnotationClustering-Prefix.pch";
+				INFOPLIST_FILE = "AnnotationClustering/AnnotationClustering-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DC505ABA18F0B505008229F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnnotationClustering.app/AnnotationClustering";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnnotationClustering/AnnotationClustering-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AnnotationClusteringTests/AnnotationClusteringTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DC505ABB18F0B505008229F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnnotationClustering.app/AnnotationClustering";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnnotationClustering/AnnotationClustering-Prefix.pch";
+				INFOPLIST_FILE = "AnnotationClusteringTests/AnnotationClusteringTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC505A7C18F0B505008229F7 /* Build configuration list for PBXProject "AnnotationClustering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC505AB418F0B505008229F7 /* Debug */,
+				DC505AB518F0B505008229F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC505AB618F0B505008229F7 /* Build configuration list for PBXNativeTarget "AnnotationClustering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC505AB718F0B505008229F7 /* Debug */,
+				DC505AB818F0B505008229F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC505AB918F0B505008229F7 /* Build configuration list for PBXNativeTarget "AnnotationClusteringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC505ABA18F0B505008229F7 /* Debug */,
+				DC505ABB18F0B505008229F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC505A7918F0B505008229F7 /* Project object */;
+}
