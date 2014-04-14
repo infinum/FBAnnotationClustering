@@ -29,7 +29,8 @@ All clusters will have `FBAnnotationCluster` class, so when MKMapView delegate m
 	- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 	{   
 	    if ([annotation isKindOfClass:[FBAnnotationCluster class]]) {
-			NSLog(@"Annotation is cluster.")
+	        FBAnnotationCluster *cluster = (FBAnnotationCluster *)annotation;
+	        NSLog(@"Annotation is cluster. Number of annotations in cluster: %lu", (unsigned long)cluster.annotations.count);
 	    } else {
 			NSLog(@"Normal annotation.")
 	    }	
