@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.platform                = :ios, '6.0'
   s.ios.deployment_target   = '6.0'
   s.source_files            = 'FBAnnotationClustering'
-  s.public_header_files     = 'FBAnnotationClustering/FBAnnotationClustering.h', 'FBAnnotationClustering/FBAnnotationCluster.h', 'FBAnnotationClustering/FBClusteringManager.h' 
+  s.public_header_files     = 'FBAnnotationClustering/*.h'
 
   s.frameworks = 'CoreLocation', 'MapKit'
 end
