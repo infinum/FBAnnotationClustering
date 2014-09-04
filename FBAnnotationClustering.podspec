@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'Clustering library for iOS maps'
   s.homepage         = 'https://github.com/infinum/FBAnnotationClustering'
-  s.screenshots      = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://raw.githubusercontent.com/infinum/FBAnnotationClustering/master/Images/example.png'
   s.license          = 'MIT'
   s.author           = { 'Filip Beć' => 'filip.bec@gmail.com' }
   s.source           = { :git => 'https://github.com/infinum/FBAnnotationClustering.git', :tag => '0.1.0' }
