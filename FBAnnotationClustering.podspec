@@ -7,25 +7,16 @@
 Pod::Spec.new do |s|
   s.name             = "FBAnnotationClustering"
   s.version          = "0.1.0"
-  s.summary          = "A short description of FBAnnotationClustering."
-  s.description      = <<-DESC
-                       An optional longer description of FBAnnotationClustering
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = ""
+  s.summary          = "Clustering library for iOS maps"
   s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Filip Beć" => "filip.bec@gmail.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/infinum/FBAnnotationClustering", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/FilipBec'
-
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
   s.requires_arc = true
-
   s.source_files = 'FBAnnotationClustering'
-  s.public_header_files = 'FBAnnotationClustering/*.h'
+  s.public_header_files = 'FBAnnotationClustering/FBAnnotationClustering.h', 'FBAnnotationClustering/FBAnnotationCluster.h', 'FBAnnotationClustering/FBClusteringManager.h' 
   s.frameworks = 'CoreLocation', 'MapKit'
 end
