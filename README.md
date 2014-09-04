@@ -3,6 +3,7 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
 
+![FBAnnotationClustering example](Images/example.png)
 
 ## Usage
 
