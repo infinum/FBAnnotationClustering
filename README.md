@@ -10,7 +10,7 @@ Create your clustering manager (and initialize with annotations or add annotatio
 	
 	self.clusteringManager = [[FBClusteringManager alloc] initWithAnnotations:arrayOfAnnotations];
 	
-To display annotations grouped in clusters on the map implement MKMapView delegate method `mapView:regionDidChangeAnimated:`. An example of implementation:
+Implement MKMapView delegate method `mapView:regionDidChangeAnimated:` to display annotations grouped in clusters on the map. An example of implementation:
 
 	- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 	{
@@ -53,7 +53,7 @@ it simply add the following line to your Podfile:
 
     pod "FBAnnotationClustering"
     
-Or add all files from [FBAnnotationClustering](FBAnnotationClustering) directory to your project.
+If you don't like Cocapods, you can add all files from [FBAnnotationClustering](FBAnnotationClustering) directory to your project.
 
 ## TODO
 
