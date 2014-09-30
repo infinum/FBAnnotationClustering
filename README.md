@@ -3,6 +3,8 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
 
+FBAnnotationClustering is an iOS library for clustering map notifications in an easy and performant way. Check out the [blog post](https://www.infinum.co/the-capsized-eight/articles/a-blazingly-fast-open-source-algorithm-for-poi-clustering-on-ios) about it.
+
 <p align="center">
   <img src="Images/example.png" alt="FBAnnotationClustering example"/>
 </p>
@@ -75,6 +77,14 @@ If you don't like Cocapods, you can add all files from [FBAnnotationClustering](
 ## Author
 
 Filip Beć, filip.bec@infinum.co
+
+Maintained by [Infinum](http://www.infinum.co)
+
+![Infinum](https://www.infinum.co/assets/logo_pic-2e19713f50692ed9b0805b199676c19a.png)
+
+## Credits
+
+FBAnnotationClustering is based on a blog post written by [thoughtbot](http://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps).
 
 ## License
 
