@@ -7,6 +7,7 @@
 //
 
 #import "FBViewController.h"
+#import "FBAnnotation.h"
 
 #define kNUMBER_OF_LOCATIONS 1000
 
