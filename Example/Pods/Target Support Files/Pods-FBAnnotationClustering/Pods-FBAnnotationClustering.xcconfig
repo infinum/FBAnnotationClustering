@@ -1,0 +1,1 @@
+PODS_FBANNOTATIONCLUSTERING_OTHER_LDFLAGS = -framework "CoreLocation" -framework "MapKit"
