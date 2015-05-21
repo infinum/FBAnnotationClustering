@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52E15B721B0E63B80026A5FB /* FBAnnotationCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E15B6A1B0E63B80026A5FB /* FBAnnotationCluster.m */; };
-		52E15B731B0E63B80026A5FB /* FBClusteringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E15B6D1B0E63B80026A5FB /* FBClusteringManager.m */; };
-		52E15B741B0E63B80026A5FB /* FBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E15B6F1B0E63B80026A5FB /* FBQuadTree.m */; };
-		52E15B751B0E63B80026A5FB /* FBQuadTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E15B711B0E63B80026A5FB /* FBQuadTreeNode.m */; };
 		8A86F1B196A24278AA00E45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F00D94D0560465788605775 /* libPods.a */; };
 		DC505A8518F0B505008229F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8418F0B505008229F7 /* Foundation.framework */; };
 		DC505A8718F0B505008229F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8618F0B505008229F7 /* CoreGraphics.framework */; };
@@ -43,15 +39,6 @@
 /* Begin PBXFileReference section */
 		07747994D3D1DB6F5D31E65D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3F00D94D0560465788605775 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E15B691B0E63B80026A5FB /* FBAnnotationCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBAnnotationCluster.h; path = ../FBAnnotationClustering/FBAnnotationCluster.h; sourceTree = "<group>"; };
-		52E15B6A1B0E63B80026A5FB /* FBAnnotationCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBAnnotationCluster.m; path = ../FBAnnotationClustering/FBAnnotationCluster.m; sourceTree = "<group>"; };
-		52E15B6B1B0E63B80026A5FB /* FBAnnotationClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBAnnotationClustering.h; path = ../FBAnnotationClustering/FBAnnotationClustering.h; sourceTree = "<group>"; };
-		52E15B6C1B0E63B80026A5FB /* FBClusteringManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBClusteringManager.h; path = ../FBAnnotationClustering/FBClusteringManager.h; sourceTree = "<group>"; };
-		52E15B6D1B0E63B80026A5FB /* FBClusteringManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBClusteringManager.m; path = ../FBAnnotationClustering/FBClusteringManager.m; sourceTree = "<group>"; };
-		52E15B6E1B0E63B80026A5FB /* FBQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBQuadTree.h; path = ../FBAnnotationClustering/FBQuadTree.h; sourceTree = "<group>"; };
-		52E15B6F1B0E63B80026A5FB /* FBQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBQuadTree.m; path = ../FBAnnotationClustering/FBQuadTree.m; sourceTree = "<group>"; };
-		52E15B701B0E63B80026A5FB /* FBQuadTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBQuadTreeNode.h; path = ../FBAnnotationClustering/FBQuadTreeNode.h; sourceTree = "<group>"; };
-		52E15B711B0E63B80026A5FB /* FBQuadTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBQuadTreeNode.m; path = ../FBAnnotationClustering/FBQuadTreeNode.m; sourceTree = "<group>"; };
 		AD84D55ACD714A4191C3DDAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DC505A8118F0B505008229F7 /* AnnotationClustering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnotationClustering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC505A8418F0B505008229F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,15 +101,6 @@
 		DC505A7818F0B505008229F7 = {
 			isa = PBXGroup;
 			children = (
-				52E15B691B0E63B80026A5FB /* FBAnnotationCluster.h */,
-				52E15B6A1B0E63B80026A5FB /* FBAnnotationCluster.m */,
-				52E15B6B1B0E63B80026A5FB /* FBAnnotationClustering.h */,
-				52E15B6C1B0E63B80026A5FB /* FBClusteringManager.h */,
-				52E15B6D1B0E63B80026A5FB /* FBClusteringManager.m */,
-				52E15B6E1B0E63B80026A5FB /* FBQuadTree.h */,
-				52E15B6F1B0E63B80026A5FB /* FBQuadTree.m */,
-				52E15B701B0E63B80026A5FB /* FBQuadTreeNode.h */,
-				52E15B711B0E63B80026A5FB /* FBQuadTreeNode.m */,
 				DC505A9618F0B505008229F7 /* Main_iPhone.storyboard */,
 				DC505A9918F0B505008229F7 /* Main_iPad.storyboard */,
 				DC505ABC18F0B9C7008229F7 /* Classes */,
@@ -366,10 +344,6 @@
 			files = (
 				DC505AC818F0BA9E008229F7 /* FBAnnotation.m in Sources */,
 				DC505AC318F0B9C7008229F7 /* FBAppDelegate.m in Sources */,
-				52E15B741B0E63B80026A5FB /* FBQuadTree.m in Sources */,
-				52E15B721B0E63B80026A5FB /* FBAnnotationCluster.m in Sources */,
-				52E15B751B0E63B80026A5FB /* FBQuadTreeNode.m in Sources */,
-				52E15B731B0E63B80026A5FB /* FBClusteringManager.m in Sources */,
 				DC505A9118F0B505008229F7 /* main.m in Sources */,
 				DC505AC418F0B9C7008229F7 /* FBViewController.m in Sources */,
 			);
