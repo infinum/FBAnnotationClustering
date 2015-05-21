@@ -69,6 +69,9 @@
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect
                                  withZoomScale:(double)zoomScale;
 
+- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect
+                                 withZoomScale:(double)zoomScale
+                                 withFilter:(BOOL (^)(id<MKAnnotation>)) filter;
 
 /**
  All annotations in quad tree.
