@@ -91,6 +91,11 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale
 {
+    return [self clusteredAnnotationsWithinMapRect:rect withZoomScale:zoomScale withFilter:nil];
+}
+
+- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale withFilter:(BOOL (^)(id<MKAnnotation>)) filter
+{
     double cellSize = FBCellSizeForZoomScale(zoomScale);
     if ([self.delegate respondsToSelector:@selector(cellSizeFactorForCoordinator:)]) {
         cellSize *= [self.delegate cellSizeFactorForCoordinator:self];
@@ -116,9 +121,13 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
             NSMutableArray *annotations = [[NSMutableArray alloc] init];
 
             [self.tree enumerateAnnotationsInBox:mapBox usingBlock:^(id<MKAnnotation> obj) {
-                totalLatitude += [obj coordinate].latitude;
-                totalLongitude += [obj coordinate].longitude;
-                [annotations addObject:obj];
+                
+                if(!filter || (filter(obj) == TRUE))
+                {
+                    totalLatitude += [obj coordinate].latitude;
+                    totalLongitude += [obj coordinate].longitude;
+                    [annotations addObject:obj];
+                }
             }];
             
             NSInteger count = [annotations count];
