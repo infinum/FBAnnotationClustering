@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../FBAnnotationClustering.podspec
 
 SPEC CHECKSUMS:
-  FBAnnotationClustering: a62c71d3a4196453ac79b09dc599d9e7f285f4b6
+  FBAnnotationClustering: 8f5da79dde2e6383da7a1599b3c52fa889e6e131
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.37.1
