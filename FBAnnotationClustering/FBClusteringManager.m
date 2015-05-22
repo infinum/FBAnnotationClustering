@@ -64,6 +64,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 {
     self = [super init];
     if (self) {
+        _lock = [NSRecursiveLock new];
         [self addAnnotations:annotations];
     }
     return self;
