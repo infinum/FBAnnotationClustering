@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A86F1B196A24278AA00E45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F00D94D0560465788605775 /* libPods.a */; };
+		A421D4561B4320B000EF0ED2 /* FBAnnotationTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = A421D4551B4320B000EF0ED2 /* FBAnnotationTwo.m */; };
 		DC505A8518F0B505008229F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8418F0B505008229F7 /* Foundation.framework */; };
 		DC505A8718F0B505008229F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8618F0B505008229F7 /* CoreGraphics.framework */; };
 		DC505A8918F0B505008229F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC505A8818F0B505008229F7 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		07747994D3D1DB6F5D31E65D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3F00D94D0560465788605775 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A421D4541B4320B000EF0ED2 /* FBAnnotationTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAnnotationTwo.h; sourceTree = "<group>"; };
+		A421D4551B4320B000EF0ED2 /* FBAnnotationTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAnnotationTwo.m; sourceTree = "<group>"; };
 		AD84D55ACD714A4191C3DDAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DC505A8118F0B505008229F7 /* AnnotationClustering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnotationClustering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC505A8418F0B505008229F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -204,6 +207,8 @@
 			children = (
 				DC505AC618F0BA9E008229F7 /* FBAnnotation.h */,
 				DC505AC718F0BA9E008229F7 /* FBAnnotation.m */,
+				A421D4541B4320B000EF0ED2 /* FBAnnotationTwo.h */,
+				A421D4551B4320B000EF0ED2 /* FBAnnotationTwo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				DC505AC318F0B9C7008229F7 /* FBAppDelegate.m in Sources */,
 				DC505A9118F0B505008229F7 /* main.m in Sources */,
 				DC505AC418F0B9C7008229F7 /* FBViewController.m in Sources */,
+				A421D4561B4320B000EF0ED2 /* FBAnnotationTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

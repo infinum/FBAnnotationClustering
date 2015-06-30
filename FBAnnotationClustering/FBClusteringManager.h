@@ -42,6 +42,12 @@
  */
 - (id)initWithAnnotations:(NSArray *)annotations;
 
+/**
+ Register an annotation class to be clustered separately from other annotations
+ 
+ @param annotClass register a specific class to be separated when clustering
+ */
+- (void)registerClass:(Class)annotClass;
 
 /**
  Replace current annotations new array of annotations.

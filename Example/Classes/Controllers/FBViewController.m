@@ -8,6 +8,7 @@
 
 #import "FBViewController.h"
 #import "FBAnnotation.h"
+#import "FBAnnotationTwo.h"
 
 #define kNUMBER_OF_LOCATIONS 1000
 
@@ -29,11 +30,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     NSMutableArray *array = [self randomLocationsWithCount:kNUMBER_OF_LOCATIONS];
+
     self.numberOfLocations = kNUMBER_OF_LOCATIONS;
     [self updateLabelText];
     
     // Create clustering manager
     self.clusteringManager = [[FBClusteringManager alloc] initWithAnnotations:array];
+    [self.clusteringManager registerClass:[FBAnnotation class]];
+    [self.clusteringManager registerClass:[FBAnnotationTwo class]];
     self.clusteringManager.delegate = self;
     
     self.mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0);
@@ -72,8 +76,11 @@
     if ([annotation isKindOfClass:[FBAnnotationCluster class]]) {
         FBAnnotationCluster *cluster = (FBAnnotationCluster *)annotation;
         cluster.title = [NSString stringWithFormat:@"%lu", (unsigned long)cluster.annotations.count];
-        
-        annotationView.pinColor = MKPinAnnotationColorGreen;
+        if ([cluster.annotClassType isEqual:[FBAnnotation class]]) {
+            annotationView.pinColor = MKPinAnnotationColorPurple;
+        } else {
+            annotationView.pinColor = MKPinAnnotationColorGreen;
+        }
         annotationView.canShowCallout = YES;
     } else {
         annotationView.pinColor = MKPinAnnotationColorRed;
@@ -110,10 +117,15 @@
 {
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
-        FBAnnotation *a = [[FBAnnotation alloc] init];
-        a.coordinate = CLLocationCoordinate2DMake(drand48() * 40 - 20, drand48() * 80 - 40);
-        
-        [array addObject:a];
+        if (i % 2 == 0) {
+            FBAnnotation *a = [[FBAnnotation alloc] init];
+            a.coordinate = CLLocationCoordinate2DMake(drand48() * 40 - 20, drand48() * 80 - 40);
+            [array addObject:a];
+        } else {
+            FBAnnotationTwo *a = [[FBAnnotationTwo alloc] init];
+            a.coordinate = CLLocationCoordinate2DMake(drand48() * 40 - 20, drand48() * 80 - 40);
+            [array addObject:a];
+        }
     }
     return array;
 }
