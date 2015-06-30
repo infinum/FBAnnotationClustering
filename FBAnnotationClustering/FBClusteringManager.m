@@ -49,6 +49,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 @property (nonatomic, strong) FBQuadTree *tree;
 @property (nonatomic, strong) NSRecursiveLock *lock;
+@property (nonatomic, strong) NSMutableArray *registeredClasses;
 
 @end
 
@@ -65,6 +66,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
     self = [super init];
     if (self) {
         _lock = [NSRecursiveLock new];
+        self.registeredClasses = [[NSMutableArray alloc] init];
         [self addAnnotations:annotations];
     }
     return self;
@@ -89,6 +91,13 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
     [self.lock unlock];
 }
 
+- (void)registerClass:(Class)annotClass
+{
+    if (![self.registeredClasses containsObject:annotClass]) {
+        [self.registeredClasses addObject:annotClass];
+    }
+}
+
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale
 {
     return [self clusteredAnnotationsWithinMapRect:rect withZoomScale:zoomScale withFilter:nil];
@@ -110,43 +119,69 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
     NSMutableArray *clusteredAnnotations = [[NSMutableArray alloc] init];
     
     [self.lock lock];
-    for (NSInteger x = minX; x <= maxX; x++) {
-        for (NSInteger y = minY; y <= maxY; y++) {
-            MKMapRect mapRect = MKMapRectMake(x/scaleFactor, y/scaleFactor, 1.0/scaleFactor, 1.0/scaleFactor);
-            FBBoundingBox mapBox = FBBoundingBoxForMapRect(mapRect);
-            
-            __block double totalLatitude = 0;
-            __block double totalLongitude = 0;
-            
-            NSMutableArray *annotations = [[NSMutableArray alloc] init];
+    for (int i=0; i<[self.registeredClasses count] + 1; i++) {
+        Class annotTypeClass;
+        annotTypeClass = [self classForIndex:i];
 
-            [self.tree enumerateAnnotationsInBox:mapBox usingBlock:^(id<MKAnnotation> obj) {
+        for (NSInteger x = minX; x <= maxX; x++) {
+            for (NSInteger y = minY; y <= maxY; y++) {
+                MKMapRect mapRect = MKMapRectMake(x/scaleFactor, y/scaleFactor, 1.0/scaleFactor, 1.0/scaleFactor);
+                FBBoundingBox mapBox = FBBoundingBoxForMapRect(mapRect);
                 
-                if(!filter || (filter(obj) == TRUE))
-                {
-                    totalLatitude += [obj coordinate].latitude;
-                    totalLongitude += [obj coordinate].longitude;
-                    [annotations addObject:obj];
+                __block double totalLatitude = 0;
+                __block double totalLongitude = 0;
+                
+                NSMutableArray *annotations = [[NSMutableArray alloc] init];
+
+                [self.tree enumerateAnnotationsInBox:mapBox usingBlock:^(id<MKAnnotation> obj) {
+                    if(!filter || (filter(obj) == TRUE))
+                    {
+                        if (![[obj class] isEqual:annotTypeClass] &&
+                            (annotTypeClass != nil || [self.registeredClasses containsObject:[obj class]])) {
+                            return;
+                        }
+                        
+                        totalLatitude += [obj coordinate].latitude;
+                        totalLongitude += [obj coordinate].longitude;
+                        [annotations addObject:obj];
+                    }
+                }];
+                
+                NSUInteger count = annotations.count;
+                
+                if (count == 1) {
+                    [clusteredAnnotations addObjectsFromArray:annotations];
+                } else if (count > 1) {
+                    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(totalLatitude/count, totalLongitude/count);
+                    FBAnnotationCluster *cluster = [[FBAnnotationCluster alloc] init];
+                    cluster.coordinate = coordinate;
+                    cluster.annotations = annotations;
+                    cluster.annotClassType = annotTypeClass;
+                    [clusteredAnnotations addObject:cluster];
                 }
-            }];
-            
-            NSInteger count = [annotations count];
-            if (count == 1) {
-                [clusteredAnnotations addObjectsFromArray:annotations];
-            }
-            
-            if (count > 1) {
-                CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(totalLatitude/count, totalLongitude/count);
-                FBAnnotationCluster *cluster = [[FBAnnotationCluster alloc] init];
-                cluster.coordinate = coordinate;
-                cluster.annotations = annotations;
-                [clusteredAnnotations addObject:cluster];
             }
         }
     }
     [self.lock unlock];
     
     return [NSArray arrayWithArray:clusteredAnnotations];
+}
+
+- (NSUInteger)indexForClass:(Class)annotClass
+{
+    NSUInteger index = [self.registeredClasses indexOfObject:annotClass];
+    if (index == NSNotFound) {
+        return [self.registeredClasses count];
+    }
+    return index;
+}
+
+- (Class)classForIndex:(NSUInteger)index
+{
+    if (index < [self.registeredClasses count]) {
+        return self.registeredClasses[index];
+    }
+    return nil;
 }
 
 - (NSArray *)allAnnotations

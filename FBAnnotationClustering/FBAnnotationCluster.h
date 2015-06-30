@@ -27,4 +27,7 @@
 /// Array of the annotations that are representer with this cluster.
 @property (nonatomic, strong) NSArray *annotations;
 
+// Categorize annotations with a class
+@property (nonatomic, strong) id annotClassType;
+
 @end
