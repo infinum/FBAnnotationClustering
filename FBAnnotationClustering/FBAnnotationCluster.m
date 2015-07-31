@@ -10,12 +10,14 @@
 
 @implementation FBAnnotationCluster
 
-- (NSUInteger)hash {
+- (NSUInteger)hash
+{
     NSString *toHash = [NSString stringWithFormat:@"%.5F%.5F", self.coordinate.latitude, self.coordinate.longitude];
     return [toHash hash];
 }
 
-- (BOOL)isEqual:(id)object {
+- (BOOL)isEqual:(id)object
+{
     return [self hash] == [object hash];
 }
 
