@@ -24,6 +24,32 @@
     return [self insertAnnotation:annotation toNode:self.rootNode];
 }
 
+- (BOOL)removeAnnotation:(id<MKAnnotation>)annotation
+{
+    return [self removeAnnotation:annotation fromNode:self.rootNode];
+}
+
+- (BOOL)removeAnnotation:(id<MKAnnotation>)annotation fromNode:(FBQuadTreeNode *)node
+{
+    if (!FBBoundingBoxContainsCoordinate(node.boundingBox, [annotation coordinate])) {
+        return NO;
+    }
+
+    if ([node.annotations containsObject:annotation]) {
+        [node.annotations removeObject:annotation];
+        node.count--;
+        return YES;
+    }
+
+    if ([self removeAnnotation:annotation fromNode:node.northEast]) return YES;
+    if ([self removeAnnotation:annotation fromNode:node.northWest]) return YES;
+    if ([self removeAnnotation:annotation fromNode:node.southEast]) return YES;
+    if ([self removeAnnotation:annotation fromNode:node.southWest]) return YES;
+
+    return NO;
+}
+
+
 - (BOOL)insertAnnotation:(id<MKAnnotation>)annotation toNode:(FBQuadTreeNode *)node
 {
     if (!FBBoundingBoxContainsCoordinate(node.boundingBox, [annotation coordinate])) {

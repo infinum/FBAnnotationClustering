@@ -23,6 +23,10 @@
  */
 - (BOOL)insertAnnotation:(id<MKAnnotation>)annotation;
 
+/**
+ Remove an annotation from the tree.
+ */
+- (BOOL)removeAnnotation:(id<MKAnnotation>)annotation;
 
 /**
  Enumerate annotations in @c box.
