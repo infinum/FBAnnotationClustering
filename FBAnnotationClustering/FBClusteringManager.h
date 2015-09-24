@@ -60,6 +60,14 @@
 
 
 /**
+ Remove array of annotations from current collection.
+ 
+ @param annotations Custom annotation objects.
+ */
+- (void)removeAnnotations:(NSArray *)annotations;
+
+
+/**
  Method that return array of your custom annotations or annotation clusters.
  
  @param rect An instance of MKMapRect.

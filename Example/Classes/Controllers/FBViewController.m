@@ -10,6 +10,7 @@
 #import "FBAnnotation.h"
 
 #define kNUMBER_OF_LOCATIONS 1000
+#define kFIRST_LOCATIONS_TO_REMOVE 50
 
 @interface FBViewController ()
 
@@ -38,6 +39,12 @@
     
     self.mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0);
     [self mapView:self.mapView regionDidChangeAnimated:NO];
+
+    NSMutableArray *annotationsToRemove = [[NSMutableArray alloc] init];
+    for (int i=0; i<kFIRST_LOCATIONS_TO_REMOVE; i++) {
+        [annotationsToRemove addObject:array[i]];
+    }
+    [self.clusteringManager removeAnnotations:annotationsToRemove];
 }
 
 - (void)didReceiveMemoryWarning
