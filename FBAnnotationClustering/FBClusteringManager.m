@@ -178,7 +178,10 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 - (void)displayAnnotations:(NSArray *)annotations onMapView:(MKMapView *)mapView
 {
     NSMutableSet *before = [NSMutableSet setWithArray:mapView.annotations];
-    [before removeObject:[mapView userLocation]];
+    MKUserLocation *userLocation = [mapView userLocation];
+    if (userLocation) {
+        [before removeObject:userLocation];
+    }
     NSSet *after = [NSSet setWithArray:annotations];
     
     NSMutableSet *toKeep = [NSMutableSet setWithSet:before];
