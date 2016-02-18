@@ -13,4 +13,5 @@
 
     #import "FBClusteringManager.h"
     #import "FBAnnotationCluster.h"
+    #import "FBQuadTree.h"
 #endif /* _FBANNOTATIONCLUSTERING_ */
