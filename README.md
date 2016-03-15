@@ -1,6 +1,7 @@
-# FBAnnotationClustering 
+# FBAnnotationClustering
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
 
 FBAnnotationClustering is an iOS library for clustering map notifications in an easy and performant way. Check out the [blog post](https://www.infinum.co/the-capsized-eight/articles/a-blazingly-fast-open-source-algorithm-for-poi-clustering-on-ios) about it.
