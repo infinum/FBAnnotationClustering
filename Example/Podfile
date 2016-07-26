@@ -1,2 +1,3 @@
-pod "FBAnnotationClustering", :path => "../FBAnnotationClustering.podspec"
-
+target "AnnotationClustering" do
+	pod "FBAnnotationClustering", :path => "../FBAnnotationClustering.podspec"
+end
