@@ -22,6 +22,14 @@
  */
 - (CGFloat)cellSizeFactorForCoordinator:(FBClusteringManager *)coordinator;
 
+/**
+ Method that allows you to define a minimum number of annotations to cluster.
+ @param coordinator An instance of FBClusterManager.
+ 
+ @discussion The default minimum number of Annotations to cluster is 2. If you don't want to have clusters with with only 2 annotations, you can change it with this method.
+ */
+- (NSUInteger)minAnnotationsNumberToCluster:(FBClusteringManager *)coordinator;
+
 @end
 
 
