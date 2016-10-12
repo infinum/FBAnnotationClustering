@@ -177,7 +177,23 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 - (void)displayAnnotations:(NSArray *)annotations onMapView:(MKMapView *)mapView
 {
-    NSMutableSet *before = [NSMutableSet setWithArray:self.allAnnotations];
+    NSSet *allAnnotations = [NSSet setWithArray:self.allAnnotations];
+    
+    // Only consider Annotations in mapView that are managed by BFClusteringManager
+    NSArray *filteredAnnotations = [mapView.annotations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        
+        if ([evaluatedObject isKindOfClass:[FBAnnotationCluster class]]) {
+            return YES;
+        }
+        if ([self.allAnnotations containsObject:evaluatedObject]) {
+            return YES;
+        }
+        
+        return NO;
+    }]];
+    
+    NSMutableSet *before = [NSMutableSet setWithArray:filteredAnnotations];
+    
     NSSet *after = [NSSet setWithArray:annotations];
     
     NSMutableSet *toKeep = [NSMutableSet setWithSet:before];
