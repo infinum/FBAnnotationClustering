@@ -87,6 +87,11 @@ Maintained by [Infinum](http://www.infinum.co)
 
 FBAnnotationClustering is based on a blog post written by [thoughtbot](http://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps).
 
+Maintained and sponsored by
+[Infinum] (http://www.infinum.co).
+
+<img src="https://infinum.co/infinum.png" width="264">
+
 ## License
 
 FBAnnotationClustering is available under the MIT license. See the LICENSE file for more info.
