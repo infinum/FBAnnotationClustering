@@ -49,6 +49,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 @property (nonatomic, strong) FBQuadTree *tree;
 @property (nonatomic, strong) NSRecursiveLock *lock;
+@property (nonatomic, strong) NSMutableSet *types;
 
 @end
 
@@ -65,6 +66,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
     self = [super init];
     if (self) {
         _lock = [NSRecursiveLock new];
+        _types = [NSMutableSet setWithObject:[FBAnnotationCluster class]];
         [self addAnnotations:annotations];
     }
     return self;
@@ -84,6 +86,11 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
     [self.lock lock];
     for (id<MKAnnotation> annotation in annotations) {
+        
+        if (![self.types containsObject:[annotation class]]) {
+            [self.types addObject:[annotation class]];
+        }
+        
         [self.tree insertAnnotation:annotation];
     }
     [self.lock unlock];
@@ -177,19 +184,10 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 - (void)displayAnnotations:(NSArray *)annotations onMapView:(MKMapView *)mapView
 {
-    NSSet *allAnnotations = [NSSet setWithArray:self.allAnnotations];
-    
     // Only consider Annotations in mapView that are managed by BFClusteringManager
     NSArray *filteredAnnotations = [mapView.annotations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
         
-        if ([evaluatedObject isKindOfClass:[FBAnnotationCluster class]]) {
-            return YES;
-        }
-        if ([self.allAnnotations containsObject:evaluatedObject]) {
-            return YES;
-        }
-        
-        return NO;
+        return [self.types containsObject:[evaluatedObject class]];
     }]];
     
     NSMutableSet *before = [NSMutableSet setWithArray:filteredAnnotations];
