@@ -104,10 +104,15 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
 
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale
 {
-    return [self clusteredAnnotationsWithinMapRect:rect withZoomScale:zoomScale withFilter:nil];
+    return [self clusteredAnnotationsWithinMapRect:rect withZoomScale:zoomScale withFilter:nil withMinimum:1];
 }
 
-- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale withFilter:(BOOL (^)(id<MKAnnotation>)) filter
+- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale withMinimum:(int)minimum
+{
+    return [self clusteredAnnotationsWithinMapRect:rect withZoomScale:zoomScale withFilter:nil withMinimum:minimum];
+}
+
+- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale withFilter:(BOOL (^)(id<MKAnnotation>))filter withMinimum:(int)minimum
 {
     double cellSize = FBCellSizeForZoomScale(zoomScale);
     if ([self.delegate respondsToSelector:@selector(cellSizeFactorForCoordinator:)]) {
@@ -144,11 +149,9 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
             }];
             
             NSInteger count = [annotations count];
-            if (count == 1) {
+            if (count <= minimum) {
                 [clusteredAnnotations addObjectsFromArray:annotations];
-            }
-            
-            if (count > 1) {
+            } else {
                 CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(totalLatitude/count, totalLongitude/count);
                 FBAnnotationCluster *cluster = [[FBAnnotationCluster alloc] init];
                 cluster.coordinate = coordinate;

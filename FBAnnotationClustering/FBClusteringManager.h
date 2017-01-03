@@ -72,6 +72,7 @@
  
  @param rect An instance of MKMapRect.
  @param zoomScale An instance of MKMapRect.
+ @param minimum Sets minimum amount of annotations to cluster.
  @returns Array of annotations objects of type @c FBAnnotationCluster or your custom class.
  */
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect
@@ -79,7 +80,12 @@
 
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect
                                  withZoomScale:(double)zoomScale
-                                 withFilter:(BOOL (^)(id<MKAnnotation>)) filter;
+                                   withMinimum:(int)minimum;
+
+- (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect
+                                 withZoomScale:(double)zoomScale
+                                    withFilter:(BOOL (^)(id<MKAnnotation>))filter
+                                   withMinimum:(int)minimum;
 
 /**
  All annotations in quad tree.
