@@ -41,10 +41,10 @@
         return YES;
     }
 
-    if ([self removeAnnotation:annotation fromNode:node.northEast]) return YES;
-    if ([self removeAnnotation:annotation fromNode:node.northWest]) return YES;
-    if ([self removeAnnotation:annotation fromNode:node.southEast]) return YES;
-    if ([self removeAnnotation:annotation fromNode:node.southWest]) return YES;
+    if ((node.northEast != nil) && [self removeAnnotation:annotation fromNode:node.northEast]) return YES;
+    if ((node.northWest != nil) && [self removeAnnotation:annotation fromNode:node.northWest]) return YES;
+    if ((node.southEast != nil) && [self removeAnnotation:annotation fromNode:node.southEast]) return YES;
+    if ((node.southWest != nil) && [self removeAnnotation:annotation fromNode:node.southWest]) return YES;
 
     return NO;
 }
