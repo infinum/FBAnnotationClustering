@@ -79,16 +79,12 @@ If you don't like Cocapods, you can add all files from [FBAnnotationClustering](
 
 Filip Beć, filip.bec@infinum.co
 
-Maintained by [Infinum](http://www.infinum.co)
-
-![Infinum](https://www.infinum.co/assets/logo_pic-2e19713f50692ed9b0805b199676c19a.png)
-
 ## Credits
 
 FBAnnotationClustering is based on a blog post written by [thoughtbot](http://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps).
 
 Maintained and sponsored by
-[Infinum] (http://www.infinum.co).
+[Infinum](http://www.infinum.co).
 
 <img src="https://infinum.co/infinum.png" width="264">
 
