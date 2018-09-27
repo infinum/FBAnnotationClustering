@@ -16,7 +16,6 @@
 		E1E352F61C762CD100D2DE8A /* FBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E352EC1C762CD100D2DE8A /* FBQuadTree.m */; };
 		E1E352F71C762CD100D2DE8A /* FBQuadTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E352ED1C762CD100D2DE8A /* FBQuadTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1E352F81C762CD100D2DE8A /* FBQuadTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E352EE1C762CD100D2DE8A /* FBQuadTreeNode.m */; };
-		E1E352F91C762CD100D2DE8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E352EF1C762CD100D2DE8A /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E352F91C762CD100D2DE8A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
