@@ -36,6 +36,7 @@ CGFloat FBCellSizeForZoomScale(MKZoomScale zoomScale)
         case 18:
             return 32;
         case 19:
+        case 20:
             return 16;
             
         default:
