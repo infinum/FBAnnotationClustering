@@ -1,3 +1,6 @@
+# FBAnnotationClustering is **no longer maintained**. All issues and pull request will not be checked.
+
+
 # FBAnnotationClustering
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/FBAnnotationClustering/badge.png)](http://cocoadocs.org/docsets/FBAnnotationClustering)
